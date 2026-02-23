@@ -1,0 +1,20 @@
+﻿<div class="row">
+    <div class="col-md-6">
+        <div class="card card-inverse card-info">
+            <div class="card-body">
+                <h3 class="card-title">
+                    Registration confirmed
+                </h3>
+
+                <p *ngIf="!emailConfirmed" class="card-text">
+                    We have sent you a confirmation email, please visit your inbox and confirm by clicking the confirmation link.
+                </p>
+                <p  class="card-text">
+                     please <a routerLink="../../login" class="btn btn-inverse">Sign in</a> now.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+

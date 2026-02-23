@@ -1,0 +1,21 @@
+﻿/*Custom css style and updates if any */
+
+.padding-social-logins {
+    padding: .10rem .75rem;
+   
+}
+.page-public-wrapper {
+    background: #eef5f9!important;
+    padding-bottom: 60px;
+}
+
+.page-padding
+{
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.padding-left
+{
+    padding-left:35px;
+}

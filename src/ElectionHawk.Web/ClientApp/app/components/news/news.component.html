@@ -1,0 +1,21 @@
+<p-table [value]="news" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Heading</th>
+            <th>Description</th>
+            <!-- <th>Source</th> -->
+            <th>Status</th>
+            <!-- <th>Created Date</th> -->
+            <th>Published Date</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-ne>
+        <tr>
+            <td>{{ne?.heading}}</td>
+            <td>{{ne?.description}}</td>
+            <td>{{ne?.status}}</td>
+            <td>{{ne?.publishedDate}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+

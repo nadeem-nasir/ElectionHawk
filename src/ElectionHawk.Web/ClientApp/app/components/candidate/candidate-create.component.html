@@ -1,0 +1,137 @@
+﻿<div class="row">
+ <div class="col-lg-6">
+
+        <div class="card card-outline-info">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">Candidate Form</h4>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Sample Form with the Icons</h4>
+                <h6 class="card-subtitle">made with bootstrap elements</h6>
+                <form class="form p-t-20" novalidate (ngSubmit)="save()" [formGroup]="candidateForm">
+                    
+					<div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="name" type="text" formControlName="name" placeholder="Name">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="age">Age</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="age" type="text" formControlName="age" placeholder="Age">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="gender" type="text" formControlName="gender" placeholder="Gender">
+                        </div>
+                    </div>
+					
+                    
+   
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="address" placeholder="Address" type="text" formControlName="address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="publishedDate">Picture</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="picture" placeholder="Picture" formControlName="picture" type="file">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="constituencyId">Constituency</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <select formControlName="constituencyId"  class="form-control" id="constituencyId"  placeholder="Select Constituency" >
+                               <option *ngFor="let c of constituency" ngValue={{c.constituencyId}}>
+                                {{c.constituencyTitle}}
+                            </option>
+                        </select>
+							
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="affiliatedPoliticalPartyId">PoliticalParty</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <select formControlName="affiliatedPoliticalPartyId" id="affiliatedPoliticalPartyId"  class="form-control"  placeholder="Select Political Party" >
+                               <option *ngFor="let pp of politicalparty" ngValue={{pp.PoliticalPartyId}}>
+                                {{pp.name}}
+                            </option>
+                        </select>
+                        </div>
+                    </div>
+                   <div class="form-group">
+                        <label for="profileTypeId">Profile Type</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <select formControlName="profileTypeId"  class="form-control"  placeholder="Select Profile Type" >
+                               <option *ngFor="let pt of profiletype" ngValue={{pt.profileTypeId}}>
+                                {{pt.description}}
+                            </option>
+                        </select>
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="profileType">Phone1</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="profileType" placeholder="Phone" type="text" formControlName="phone1">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="phone2">Phone2</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="phone2" placeholder="Phone2" type="text" formControlName="phone2">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="email" placeholder="Email" type="text" formControlName="email">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="whatsapp">Whatsapp</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="whatsapp" placeholder="Whatsapp" type="text" formControlName="whatsapp">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="facebookUrl">FacebookUrl</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="facebookUrl" placeholder="Profile Type" type="text" formControlName="facebookurl">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="twitter">TwitterUrl</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="twitter" placeholder="Twitter" type="text" formControlName="twitterurl">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="media">MediaPresence</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="media" placeholder="Media Presence" type="text" formControlName="media">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+        
+</div>
+    </div>
+<!--                        <p-calendar id="publishedDate" class="form-control" formControlName="publishedDate" dateFormat="mm/dd/yy" ></p-calendar>-->

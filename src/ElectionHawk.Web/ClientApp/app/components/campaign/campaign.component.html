@@ -1,0 +1,27 @@
+
+
+<p-table [value]="campaign" [paginator]="true" [rows]="10" >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Title</th>
+            <th>Media</th>
+            <th>Agenda</th>
+            <th>Forum</th>
+            <th>Medium of Propagation</th>
+			<th>Action</th>
+            <!-- <th>Campaign Id</th> -->
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-camp>
+            <tr>
+                <td>{{camp?.title}}</td>
+                <td>{{camp?.media}}</td>
+                <td>{{camp?.agendaItemEntity.description}}</td>
+                <td>{{camp?.forum}}</td>
+                <td>{{camp?.mediumofPropagation}}</td>
+				<td><a href="#" [routerLink]="['/campaign-edit']" aria-expanded="false"  [queryParams]="{Id: camp?.campaignId}" class="btn btn-success" role="button">Edit</a></td>
+                <!-- <td>{{camp?.campaignId}}</td> -->
+               
+            </tr>
+        </ng-template>
+</p-table>

@@ -1,0 +1,26 @@
+<p-table [value]="expense" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header">
+        <tr>
+            <!-- <th>ExpenseId</th> -->
+            <th>Event</th>
+            <th>AmountUtilized</th>
+            <th>TotalBudget</th>
+            <!-- <th>Balance</th> -->
+            <!-- <th>ExpenseType</th> -->
+            <th>Description</th>
+            <th>ManagerProfile</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-ex>
+        <tr>
+            <!-- <td>{{ex?.expenseId}}</td> -->
+            <td>{{ex?.evt.description}}</td>
+            <td>{{ex?.amountUtilized}}</td>
+            <td>{{ex?.totalBudget}}</td>
+            <!-- <td>{{ex?.balance}}</td> -->
+            <!-- <td>{{ex?.expenseType}}</td> -->
+            <td>{{ex?.description}}</td>
+            <td>{{ex?.profile.name}}</td>
+    </ng-template>
+</p-table>
+

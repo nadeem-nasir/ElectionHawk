@@ -1,0 +1,800 @@
+﻿@{
+    ViewData["Title"] = "Election result";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Election result  page";
+}
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-light">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <!-- Logo icon -->
+                    <b>
+                        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                        <!-- Dark Logo icon -->
+                        <img src="/MaterialPro/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                        <!-- Light Logo icon -->
+                        <img src="/MaterialPro/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                    </b>
+                    <!--End Logo icon -->
+                    <!-- Logo text -->
+                    <span>
+                        <!-- dark Logo text -->
+                        <img src="/MaterialPro/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                        <!-- Light Logo text -->
+                        <img src="/MaterialPro/assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-public-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="row page-titles">
+                <div class="col-md-5 col-8 align-self-center">
+                    <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </div>
+                <div class="col-md-7 col-4 align-self-center">
+                    <div class="d-flex m-t-10 justify-content-end">
+                        <div class="d-flex m-r-20 m-l-10 hidden-md-down">
+                            <div class="chart-text m-r-10" *ngIf="!isLoggedIn">
+                                <h6 class="m-b-0"><small>Have an account?</small></h6>
+                                <h4 class="m-t-0 text-primary"><a class="nav-link" href="#">Sign In</a></h4>
+                            </div>
+                        </div>
+                        <div class="d-flex m-r-20 m-l-10 hidden-md-down">
+                            <div class="chart-text m-r-10" *ngIf="!isLoggedIn">
+                                <h6 class="m-b-0"><small>Join Electionhawk today</small></h6>
+                                <h4 class="m-t-0 text-primary"><a class="nav-link" href="#">Sign up</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <div>
+                <!--Carousel With captions Row 1-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="col-lg-12">
+                                    <h4 class="card-title">STAR CANDIDATES</h4>
+                                    <h6 class="card-subtitle">Add captions to your slides easily with the <code>.carousel-caption</code></h6>
+                                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+                                        @*<ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleIndicators3" data-slide-to="2"></li>
+                                    </ol>*@
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                        <div class="carousel-caption d-none d-md-block">
+                                                            <h3 class="text-white">First title goes here</h3>
+                                                            <p>this is the subcontent you can use this</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                        <div class="carousel-caption d-none d-md-block">
+                                                            <h3 class="text-white">First title goes here</h3>
+                                                            <p>this is the subcontent you can use this</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                        <div class="carousel-caption d-none d-md-block">
+                                                            <h3 class="text-white">First title goes here</h3>
+                                                            <p>this is the subcontent you can use this</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <a href="#x"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Carousel With captions end row 1 -->
+                <!--SecondRow-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        PERSONALITIES
+                                        <div class="table-responsive m-t-20">
+                                            <div id="personalities-slim-scroll">
+                                                <table class="table stylish-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="2">Assigned</th>
+                                                            <th>Name</th>
+                                                            <th>Priority</th>
+                                                            <th>Votes</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+
+                                                        <tr>
+                                                            <td style="width:50px;"><span class="round">S</span></td>
+                                                            <td>
+                                                                <h6>Sunil Joshi</h6><small class="text-muted">Web Designer</small>
+                                                            </td>
+                                                            <td>Elite Admin</td>
+                                                            <td><span class="label label-success">Low</span></td>
+                                                            <td>$3.9K</td>
+                                                        </tr>
+                                                        <tr class="active">
+                                                            <td><span class="round"><img src="/MaterialPro/assets/images/1.jpg" alt="user" width="50"></span></td>
+                                                            <td>
+                                                                <h6>Andrew</h6><small class="text-muted">Project Manager</small>
+                                                            </td>
+                                                            <td>Real Homes</td>
+                                                            <td><span class="label label-info">Medium</span></td>
+                                                            <td>$23.9K</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="round round-success">B</span></td>
+                                                            <td>
+                                                                <h6>Bhavesh patel</h6><small class="text-muted">Developer</small>
+                                                            </td>
+                                                            <td>MedicalPro Theme</td>
+                                                            <td><span class="label label-primary">High</span></td>
+                                                            <td>$12.9K</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="round round-primary">N</span></td>
+                                                            <td>
+                                                                <h6>Nirav Joshi</h6><small class="text-muted">Frontend Eng</small>
+                                                            </td>
+                                                            <td>Elite Admin</td>
+                                                            <td><span class="label label-danger">Low</span></td>
+                                                            <td>$10.9K</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="round round-warning">M</span></td>
+                                                            <td>
+                                                                <h6>Micheal Doe</h6><small class="text-muted">Content Writer</small>
+                                                            </td>
+                                                            <td>Helping Hands</td>
+                                                            <td><span class="label label-warning">High</span></td>
+                                                            <td>$12.9K</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="round round-danger">N</span></td>
+                                                            <td>
+                                                                <h6>Johnathan</h6><small class="text-muted">Graphic</small>
+                                                            </td>
+                                                            <td>Digital Agency</td>
+                                                            <td><span class="label label-info">High</span></td>
+                                                            <td>$2.6K</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <h4 class="card-title"> SEATS Data Table</h4>
+                                        <h6 class="card-subtitle">Data table example</h6>
+                                        <div class="table-responsive m-t-40">
+                                            <table id="seats-data-table" class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Constituency</th>
+                                                        <th>Candidate</th>
+                                                        <th>Party</th>
+                                                        <th>Status</th>
+                                                        <th>Votes</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Tiger Nixon</td>
+                                                        <td>System Architect</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>61</td>
+
+                                                        <td>320,800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Garrett Winters</td>
+                                                        <td>Accountant</td>
+                                                        <td>Tokyo</td>
+                                                        <td>63</td>
+
+                                                        <td>170,750</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Ashton Cox</td>
+                                                        <td>Junior Technical Author</td>
+                                                        <td>San Francisco</td>
+                                                        <td>66</td>
+
+                                                        <td>86,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Cedric Kelly</td>
+                                                        <td>Senior Javascript Developer</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>22</td>
+
+                                                        <td>433,060</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Airi Satou</td>
+                                                        <td>Accountant</td>
+                                                        <td>Tokyo</td>
+                                                        <td>33</td>
+
+                                                        <td>162,700</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Brielle Williamson</td>
+                                                        <td>Integration Specialist</td>
+                                                        <td>New York</td>
+                                                        <td>61</td>
+
+                                                        <td>372,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Herrod Chandler</td>
+                                                        <td>Sales Assistant</td>
+                                                        <td>San Francisco</td>
+                                                        <td>59</td>
+
+                                                        <td>137,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Rhona Davidson</td>
+                                                        <td>Integration Specialist</td>
+                                                        <td>Tokyo</td>
+                                                        <td>55</td>
+
+                                                        <td>327,900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Colleen Hurst</td>
+                                                        <td>Javascript Developer</td>
+                                                        <td>San Francisco</td>
+                                                        <td>39</td>
+
+                                                        <td>205,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sonya Frost</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>23</td>
+
+                                                        <td>103,600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jena Gaines</td>
+                                                        <td>Office Manager</td>
+                                                        <td>London</td>
+                                                        <td>30</td>
+
+                                                        <td>90,560</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Quinn Flynn</td>
+                                                        <td>Support Lead</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>22</td>
+
+                                                        <td>342,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Charde Marshall</td>
+                                                        <td>Regional Director</td>
+                                                        <td>San Francisco</td>
+                                                        <td>36</td>
+
+                                                        <td>470,600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Haley Kennedy</td>
+                                                        <td>Senior Marketing Designer</td>
+                                                        <td>London</td>
+                                                        <td>43</td>
+
+                                                        <td>313,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tatyana Fitzpatrick</td>
+                                                        <td>Regional Director</td>
+                                                        <td>London</td>
+                                                        <td>19</td>
+
+                                                        <td>385,750</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Michael Silva</td>
+                                                        <td>Marketing Designer</td>
+                                                        <td>London</td>
+                                                        <td>66</td>
+
+                                                        <td>198,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Paul Byrd</td>
+                                                        <td>Chief Financial Officer (CFO)</td>
+                                                        <td>New York</td>
+                                                        <td>64</td>
+
+                                                        <td>725,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Gloria Little</td>
+                                                        <td>Systems Administrator</td>
+                                                        <td>New York</td>
+                                                        <td>59</td>
+
+                                                        <td>237,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bradley Greer</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>London</td>
+                                                        <td>41</td>
+
+                                                        <td>132,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Dai Rios</td>
+                                                        <td>Personnel Lead</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>35</td>
+
+                                                        <td>217,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jenette Caldwell</td>
+                                                        <td>Development Lead</td>
+                                                        <td>New York</td>
+                                                        <td>30</td>
+
+                                                        <td>345,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Yuri Berry</td>
+                                                        <td>Chief Marketing Officer (CMO)</td>
+                                                        <td>New York</td>
+                                                        <td>40</td>
+
+                                                        <td>675,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Caesar Vance</td>
+                                                        <td>Pre-Sales Support</td>
+                                                        <td>New York</td>
+                                                        <td>21</td>
+
+                                                        <td>106,450</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Doris Wilder</td>
+                                                        <td>Sales Assistant</td>
+                                                        <td>Sidney</td>
+                                                        <td>23</td>
+
+                                                        <td>85,600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Angelica Ramos</td>
+                                                        <td>Chief Executive Officer (CEO)</td>
+                                                        <td>London</td>
+                                                        <td>47</td>
+
+                                                        <td>1,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Gavin Joyce</td>
+                                                        <td>Developer</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>42</td>
+
+                                                        <td>92,575</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jennifer Chang</td>
+                                                        <td>Regional Director</td>
+                                                        <td>Singapore</td>
+                                                        <td>28</td>
+
+                                                        <td>357,650</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Brenden Wagner</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>San Francisco</td>
+                                                        <td>28</td>
+
+                                                        <td>206,850</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fiona Green</td>
+                                                        <td>Chief Operating Officer (COO)</td>
+                                                        <td>San Francisco</td>
+                                                        <td>48</td>
+
+                                                        <td>850,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Shou Itou</td>
+                                                        <td>Regional Marketing</td>
+                                                        <td>Tokyo</td>
+                                                        <td>20</td>
+
+                                                        <td>163,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Michelle House</td>
+                                                        <td>Integration Specialist</td>
+                                                        <td>Sidney</td>
+                                                        <td>37</td>
+
+                                                        <td>95,400</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Suki Burks</td>
+                                                        <td>Developer</td>
+                                                        <td>London</td>
+                                                        <td>53</td>
+
+                                                        <td>114,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Prescott Bartlett</td>
+                                                        <td>Technical Author</td>
+                                                        <td>London</td>
+                                                        <td>27</td>
+
+                                                        <td>145,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Gavin Cortez</td>
+                                                        <td>Team Leader</td>
+                                                        <td>San Francisco</td>
+                                                        <td>22</td>
+
+                                                        <td>235,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Martena Mccray</td>
+                                                        <td>Post-Sales support</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>46</td>
+
+                                                        <td>324,050</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Unity Butler</td>
+                                                        <td>Marketing Designer</td>
+                                                        <td>San Francisco</td>
+                                                        <td>47</td>
+
+                                                        <td>85,675</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Howard Hatfield</td>
+                                                        <td>Office Manager</td>
+                                                        <td>San Francisco</td>
+                                                        <td>51</td>
+
+                                                        <td>164,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hope Fuentes</td>
+                                                        <td>Secretary</td>
+                                                        <td>San Francisco</td>
+                                                        <td>41</td>
+
+                                                        <td>109,850</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Vivian Harrell</td>
+                                                        <td>Financial Controller</td>
+                                                        <td>San Francisco</td>
+                                                        <td>62</td>
+
+                                                        <td>452,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Timothy Mooney</td>
+                                                        <td>Office Manager</td>
+                                                        <td>London</td>
+                                                        <td>37</td>
+
+                                                        <td>136,200</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jackson Bradshaw</td>
+                                                        <td>Director</td>
+                                                        <td>New York</td>
+                                                        <td>65</td>
+
+                                                        <td>645,750</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Olivia Liang</td>
+                                                        <td>Support Engineer</td>
+                                                        <td>Singapore</td>
+                                                        <td>64</td>
+
+                                                        <td>234,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bruno Nash</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>London</td>
+                                                        <td>38</td>
+
+                                                        <td>163,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sakura Yamamoto</td>
+                                                        <td>Support Engineer</td>
+                                                        <td>Tokyo</td>
+                                                        <td>37</td>
+
+                                                        <td>139,575</td>
+                                                    </tr>
+
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!--end  SEATS table -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end second row -->
+                <!--Third row -->
+                <div>
+                    <!-- ============================================================== -->
+                    <!-- Start Page Content -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Search Result For "Angular Js"</h4>
+                                    <h6 class="card-subtitle">About 14,700 result ( 0.10 seconds)</h6>
+                                    <!-- .col -->
+                                    <div class="row search-listing">
+                                        <div class="col-md-6 col-lg-6 col-xlg-4">
+                                            <div class="card card-body">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-lg-3 text-center">
+                                                        <a href="app-contact-detail.html"><img src="/MaterialPro/assets/images/1.jpg" alt="user" class="img-circle img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-md-8 col-lg-9">
+                                                        <h3 class="box-title m-b-0">Johnathan Doe</h3> <small>Web Designer</small>
+                                                        <address>
+                                                            795 Folsom Ave, Suite 600 San Francisco, CADGE 94107
+                                                            <br />
+                                                            <br />
+                                                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                                                        </address>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                        <!-- .col -->
+                                        <div class="col-md-6 col-lg-6 col-xlg-4">
+                                            <div class="card card-body">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-lg-3 text-center">
+                                                        <a href="app-contact-detail.html"><img src="/MaterialPro/assets/images/1.jpg" alt="user" class="img-circle img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-md-8 col-lg-9">
+                                                        <h3 class="box-title m-b-0">Johnathan Doe</h3> <small>Web Designer</small>
+                                                        <address>
+                                                            795 Folsom Ave, Suite 600 San Francisco, CADGE 94107
+                                                            <br />
+                                                            <br />
+                                                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                                                        </address>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                        <!-- .col -->
+                                        <div class="col-md-6 col-lg-6 col-xlg-4">
+                                            <div class="card card-body">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-lg-3 text-center">
+                                                        <a href="app-contact-detail.html"><img src="/MaterialPro/assets/images/1.jpg" alt="user" class="img-circle img-responsive"></a>
+                                                    </div>
+                                                    <div class="col-md-8 col-lg-9">
+                                                        <h3 class="box-title m-b-0">Johnathan Doe</h3> <small>Web Designer</small>
+                                                        <address>
+                                                            795 Folsom Ave, Suite 600 San Francisco, CADGE 94107
+                                                            <br />
+                                                            <br />
+                                                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                                                        </address>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row padding-left">
+                                        <div class="col-lg-offset-2">
+                                            <nav aria-label="Page navigation example" class="row m-t-40">
+                                                <ul class="pagination">
+                                                    <li class="page-item disabled">
+                                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">Next</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End PAge Content -->
+                    <!-- ============================================================== -->
+                </div>
+                <!--end third row-->
+                <!-- graph will be here -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h1>Graphs will be here </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+            </div>
+
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <footer class="">
+                                © 2017 Material Pro Admin by wrappixel.com
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        
+                    <!-- ============================================================== -->
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Page wrapper  -->
+                <!-- ============================================================== -->
+                <!--end main wrapper div-->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Wrapper -->
+
+            @section scripts
+        {
+        <script src="~/MaterialPro/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script type="text/javascript">
+            $('#personalities-slim-scroll').slimScroll({
+                color: '#00f',
+                size: '10px',
+                height: '450px',
+                alwaysVisible: true
+            });
+
+            $(document).ready(function () {
+                $('#seats-data-table').DataTable();
+            });
+        </script>
+            }

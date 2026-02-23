@@ -1,0 +1,68 @@
+﻿import { Component, OnDestroy, OnInit } from '@angular/core';
+import { IAgenda } from '../../services/interfaces';
+import { AgendaService } from '../../services/agenda.service';
+import { FormGroup, ReactiveFormsModule, FormBuilder, Validators, AbstractControl, ValidatorFn, FormArray  } from "@angular/forms";
+import { ActivatedRoute, Router } from '@angular/router';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/delay';
+import "rxjs/add/operator/takeUntil";
+import { Subject } from 'rxjs/Subject';
+import { Location } from '@angular/common'; 
+
+import { CalendarModule } from 'primeng/primeng';
+
+@Component({
+    selector: 'agenda-create',
+    templateUrl: 'agenda-create.component.html'  
+})
+
+export class AgendaCreateComponent implements OnInit, OnDestroy {
+
+    
+    private sub: any; // pointer to subscription on Route
+    agendaForm: FormGroup;
+   public agenda: IAgenda;
+   errorMessage: string;
+   private ngUnsubscribe: Subject<void> = new Subject<void>();
+    constructor(private route: ActivatedRoute,
+        private router: Router,
+        private fb: FormBuilder,
+        private agendaService: AgendaService, private location: Location)
+    {
+
+    }
+
+    ngOnInit()
+    {
+        this.agendaForm = this.fb.group({
+           description: ['', [Validators.required, Validators.minLength(3)]],
+        });
+    }
+    ngOnDestroy() {
+        // If subscribed, we must unsubscribe before Angular destroys the component.
+        // Failure to do so could create a memory leak.
+        this.ngUnsubscribe.next();
+        this.ngUnsubscribe.complete();
+    }
+    cancel()
+    {
+        this.router.navigate(['home']);
+    }
+
+    save(): void
+    {
+        console.log(this.agendaForm.value);
+        const formModel = this.agendaForm.value;
+        this.agendaService.createAgenda(formModel as IAgenda).subscribe(agenda =>
+        {
+            this.agenda = agenda;
+        },
+            error => this.errorMessage = <any>error);
+    }
+
+
+    goBack(): void {
+        this.location.back();
+    }
+}

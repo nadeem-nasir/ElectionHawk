@@ -1,0 +1,145 @@
+<div class="row">
+ <div class="col-lg-12">
+
+        <div class="card card-outline-info">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">Profile Form</h4>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Sample Form with the Icons</h4>
+                <h6 class="card-subtitle">made with bootstrap elements</h6>
+                <form class="form p-t-20" novalidate (ngSubmit)="save()" [formGroup]="profileEditForm">
+			
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="name" type="text" formControlName="name" placeholder="name">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="age">Age</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="age" type="text" formControlName="age" placeholder="age">
+                        </div>
+                    </div> 
+					<div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="gender" type="text" formControlName="gender" placeholder="gender">
+                        </div>
+                    </div> 
+					<div class="form-group">
+                        <label for="fathername">FatherName</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="fathername" type="text" formControlName="fathername" placeholder="fathername">
+                        </div>
+                    </div> 
+					<div class="form-group">
+                        <label for="spousename">Spouse Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="spousename" type="text" formControlName="spousename" placeholder="spousename">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="guardianName">Guardian Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="guardianName" type="text" formControlName="guardianName" placeholder="guardianName">
+                        </div>
+                    </div> 
+					<div class="form-group">
+                        <label for="address">Address</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="address" type="text" formControlName="address" placeholder="address">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="picture">Picture</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="picture" type="file" formControlName="picture" placeholder="picture">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="constituency">Constituency</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="constituency" type="text" formControlName="constituency" placeholder="constituency">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="affiliatedPoliticalPartyId">AffiliatedPoliticalParty</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="affiliatedPoliticalPartyId" type="text" formControlName="affiliatedPoliticalPartyId" placeholder="affiliatedPoliticalPartyId">
+                        </div>
+                    </div> 
+					<div class="form-group">
+                        <label for="profileTypeId">Profile Type</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="profileTypeId" type="text" formControlName="profileTypeId" placeholder="profileTypeId">
+                        </div>
+                    </div> 
+					<div class="form-group">
+                        <label for="phone1">Phone1</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="phone1" type="text" formControlName="phone1" placeholder="phone1">
+                        </div>
+                    </div> 
+					<div class="form-group">
+                        <label for="phone2">Phone2</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="phone2" type="text" formControlName="phone2" placeholder="phone2">
+                        </div>
+                    </div> 
+					<div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="email" type="text" formControlName="email" placeholder="email">
+                        </div>
+                    </div> 
+					<div class="form-group">
+                        <label for="whatsapp">Whatsapp</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="whatsapp" type="text" formControlName="whatsapp" placeholder="whatsapp">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="facebookurl">FacebookUrl</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="facebookurl" type="text" formControlName="facebookurl" placeholder="facebookurl">
+                        </div>
+                    </div> 
+					<div class="form-group">
+                        <label for="twitterurl">TwitterUrl</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="twitterurl" type="text" formControlName="twitterurl" placeholder="twitterurl">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="media">MediaPresence</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="media" type="text" formControlName="media" placeholder="media">
+                        </div>
+                    </div>
+                    
+
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+        
+</div>
+    </div>
+<!--                        <p-calendar id="publishedDate" class="form-control" formControlName="publishedDate" dateFormat="mm/dd/yy" ></p-calendar>-->

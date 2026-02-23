@@ -1,0 +1,147 @@
+<div class="row">
+ <div class="col-lg-6">
+
+        <div class="card card-outline-info">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">Candidate Form</h4>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Sample Form with the Icons</h4>
+                <h6 class="card-subtitle">made with bootstrap elements</h6>
+
+                <form novalidate class="form p-t-20"  (ngSubmit)="save()" 
+				[formGroup]="candidateEditForm">
+                    
+					 
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="name" placeholder="Name" type="text" formControlName="name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="gender" type="text" formControlName="gender" placeholder="Gender">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="age" placeholder="age" type="text" formControlName="age">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="address" placeholder="Address" type="text" formControlName="address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="publishedDate">Picture</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="picture" placeholder="Picture" formControlName="picture" type="file">
+                        </div>
+                    </div>
+                    
+					<div class="form-group">
+                        <label for="phone1">Phone1</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+							
+                            <input class="form-control" type="text"
+							formControlName="phone1"  >
+							
+                        </div>
+                    </div>
+					
+					
+					<div class="form-group">
+                        <label for="phone2">Phone2</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" ng-reflect-name="phone2" type="text" formControlName="phone2">
+                        </div>
+                    </div>
+
+					<div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input  type="text" formControlName="email" ng-reflect-name="email">
+                        </div>
+                    </div> 
+					
+					<div class="form-group">
+                        <label for="whatsapp">Whatsapp</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="whatsapp" placeholder="Whatsapp" type="text" formControlName="whatsapp">
+                        </div>
+                    </div> 
+					
+					<div class="form-group">
+                        <label for="facebookUrl">FacebookUrl</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="facebookUrl" placeholder="Profile Type" type="text" formControlName="facebookUrl">
+                        </div>
+                    </div> 
+					
+					<div class="form-group">
+                        <label for="twitter">TwitterUrl</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="twitterUrl" placeholder="Twitter" type="text" formControlName="twitterUrl">
+                        </div>
+                    </div> 
+					
+					<div class="form-group">
+                        <label for="media">MediaPresence</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="mediaPresence" placeholder="Media Presence" type="text" formControlName="mediaPresence">
+                        </div>
+                    </div>
+
+                    
+					
+					<div class="form-group">
+                        <label for="constituency">Constituency</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="constituency" placeholder="Constituency" type="text" formControlName="constituency"
+                                   value="candidate.constituency?.constituencyTitle">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="politicalParty">Political Party</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="politicalParty" placeholder="Political Party" type="text" formControlName="politicalParty" value="candidate.politicalParty?.name"	>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="profileType">Profile Type</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="profileType" placeholder="Profile Type" type="text" formControlName="profileType" value="candidate.profileType.description">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+        
+</div>
+    </div>

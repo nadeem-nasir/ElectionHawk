@@ -1,0 +1,27 @@
+﻿<div class="row">
+    <div class="col-lg-6">
+        <div class="card card-outline-info">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white"> Sign In</h4>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-lg-6">
+                    <div>
+                        <div class="card-block container">
+                            <appc-dynamic-form (onSubmit)="login($event)" [controls]="controls" [btnText]="'Sign In'"></appc-dynamic-form>
+                        </div>
+                    </div>
+                    <p class="text-center font-weight-bold">
+                        OR
+                    </p>
+                    <div class="padding-social-logins">
+                        <appc-social-login></appc-social-login>
+                    </div>
+                </div>
+                <!--<div *ngxPermissionsOnly="['Guest']">
+                    <div>You can see this text congrats</div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>

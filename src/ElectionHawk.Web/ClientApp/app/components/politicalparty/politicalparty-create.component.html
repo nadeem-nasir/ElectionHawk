@@ -1,0 +1,93 @@
+﻿<div class="row">
+ <div class="col-lg-12">
+
+        <div class="card card-outline-info">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">PoliticalParty Form</h4>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Sample Form with the Icons</h4>
+                <h6 class="card-subtitle">made with bootstrap elements</h6>
+                <form class="form p-t-20" novalidate (ngSubmit)="save()" [formGroup]="politicalPartyForm">
+				 
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="name" type="text" formControlName="name" placeholder="name">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="abbr">Abbreviation</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="abbr" placeholder="abbr" type="text" formControlName="abbr">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="description">Description</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="description" placeholder="description" type="text" formControlName="description">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="leadername">Leader Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="leadername" placeholder="leadername" type="text" formControlName="leadername">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="designation">Designation</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="designation" placeholder="designation" type="text" formControlName="designation">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="address">Address</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="address" placeholder="address" type="text" formControlName="address">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="website">Website</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="website" placeholder="website" type="text" formControlName="website">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="facebookurl">FacebookUrl</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="facebookurl" placeholder="facebookurl" type="text" formControlName="facebookurl">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="twitterurl">TwitterUrl</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="twitterurl" placeholder="twitterurl" type="text" formControlName="twitterurl">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="whatsapp">Whatsapp</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="whatsapp" placeholder="whatsapp" type="text" formControlName="whatsapp">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="youtube">YouTube</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="youtube" placeholder="youtube" type="text" formControlName="youtube">
+                        </div>
+                    </div>
+                    
+
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+        
+</div>
+    </div>

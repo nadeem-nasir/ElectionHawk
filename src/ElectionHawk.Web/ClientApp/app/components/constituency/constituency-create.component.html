@@ -1,0 +1,83 @@
+﻿<div class="row">
+ <div class="col-lg-6">
+
+        <div class="card card-outline-info">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">Constituency Form</h4>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Sample Form with the Icons</h4>
+                <h6 class="card-subtitle">made with bootstrap elements</h6>
+                <form class="form p-t-20" novalidate (ngSubmit)="save()" [formGroup]="constituencyForm">
+                    <div class="form-group">
+                        <label for="constituencyTypeId">Constituency Type</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="constituencyTypeId" type="text" formControlName="constituencyTypeId" placeholder="constituencyTypeId">
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="title">Constituency Title</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input class="form-control" id="title" type="text" formControlName="title" placeholder="Title">
+                        </div>
+                    </div> <div class="form-group">
+                        <label for="constituencyName">Constituency Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input class="form-control" id="constituencyName" type="text" formControlName="constituencyName" placeholder="constituencyName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="map">Map</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="map" placeholder="Map" type="text" formControlName="map">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Area</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="area" placeholder="Area" formControlName="area" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="city" formControlName="city" placeholder="city" type="text">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="district">District</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="district" formControlName="district" placeholder="district" type="text">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="province">Province</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="province" formControlName="province" placeholder="province" type="text">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="ecpconstcode">ECP Const Code</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="ecpconstcode" formControlName="ecpconstcode" placeholder="ecpconstcode" type="text">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+        
+</div>
+    </div>
+<!--                        <p-calendar id="publishedDate" class="form-control" formControlName="publishedDate" dateFormat="mm/dd/yy" ></p-calendar>-->

@@ -1,0 +1,139 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.0\ElectionHawk.Web.xml</DocumentationFile>
+    <NoWarn>1701;1702;1705; NU1701;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.6.15" />
+    <PackageReference Include="Marvin.Cache.Headers" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
+
+    <PackageReference Include="AspNet.Security.OAuth.Validation" Version="2.0.0-*" />
+    <PackageReference Include="OpenIddict" Version="2.0.0-*" />
+    <PackageReference Include="OpenIddict.EntityFrameworkCore" Version="2.0.0-*" />
+    <PackageReference Include="OpenIddict.Mvc" Version="2.0.0-*" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <!--cooy-->
+  <ItemGroup>
+    <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
+    <Compile Remove="Models\AccountViewModels1\**" />
+    <Compile Remove="Models\AccountViewModels\**" />
+    <Compile Remove="Models\ManageViewModels1\**" />
+    <Compile Remove="Models\ManageViewModels\**" />
+    <Compile Remove="Views\Account1\**" />
+    <Compile Remove="Views\Account\**" />
+    <Compile Remove="Views\Manage1\**" />
+    <Compile Remove="Views\Manage\**" />
+    <Content Remove="ClientApp\**" />
+    <Content Remove="Models\AccountViewModels1\**" />
+    <Content Remove="Models\AccountViewModels\**" />
+    <Content Remove="Models\ManageViewModels1\**" />
+    <Content Remove="Models\ManageViewModels\**" />
+    <Content Remove="Views\Account1\**" />
+    <Content Remove="Views\Account\**" />
+    <Content Remove="Views\Manage1\**" />
+    <Content Remove="Views\Manage\**" />
+    <EmbeddedResource Remove="Models\AccountViewModels1\**" />
+    <EmbeddedResource Remove="Models\AccountViewModels\**" />
+    <EmbeddedResource Remove="Models\ManageViewModels1\**" />
+    <EmbeddedResource Remove="Models\ManageViewModels\**" />
+    <EmbeddedResource Remove="Views\Account1\**" />
+    <EmbeddedResource Remove="Views\Account\**" />
+    <EmbeddedResource Remove="Views\Manage1\**" />
+    <EmbeddedResource Remove="Views\Manage\**" />
+    <None Remove="Models\AccountViewModels1\**" />
+    <None Remove="Models\AccountViewModels\**" />
+    <None Remove="Models\ManageViewModels1\**" />
+    <None Remove="Models\ManageViewModels\**" />
+    <None Remove="Views\Account1\**" />
+    <None Remove="Views\Account\**" />
+    <None Remove="Views\Manage1\**" />
+    <None Remove="Views\Manage\**" />
+  </ItemGroup>
+
+  <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+
+    <!-- In development, the dist files won't exist on the first run or when cloning to
+         a different machine, so rebuild them if not already present. -->
+    <Message Importance="high" Text="Performing first-run Webpack build..." />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec Command="npm install" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20171223205529_InitialCreate.cs" />
+    <Compile Remove="Migrations\20171223205529_InitialCreate.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\app\components\navmenu\navheader.component.ts" />
+  </ItemGroup>
+  <!--end copy-->
+  <ItemGroup>
+    <ProjectReference Include="..\ElectionHawk.Common\ElectionHawk.Common.csproj" />
+    <ProjectReference Include="..\ElectionHawk.Service\ElectionHawk.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\app\core\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="wwwroot\Content\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\primeng\start\theme.css.map" />
+    <None Include="wwwroot\Content\primeng\start\theme.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\navmenu\navheader.component.ts" />
+  </ItemGroup>
+
+</Project>

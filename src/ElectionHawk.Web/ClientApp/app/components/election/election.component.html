@@ -1,0 +1,14 @@
+<p-table [value]="election" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Serail No</th>
+            <th>Name</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-el>
+        <tr>
+            <td>{{el?.electionId}}</td>
+            <td>{{el?.electionName}}</td>
+    </ng-template>
+</p-table>
+

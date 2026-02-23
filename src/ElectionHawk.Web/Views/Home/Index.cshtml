@@ -1,0 +1,27 @@
+﻿@{
+    var loginProviders = Helpers.JsonSerialize((await SignInManager.GetExternalAuthenticationSchemesAsync()).ToList().Select(a => a.Name));
+}
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script>
+    var appData =
+        {
+            loginProviders: JSON.parse('@Html.Raw(loginProviders)')
+        };
+</script>
+<AppElectionHawk asp-ng2-prerender-module="ClientApp/dist/main-server">Loading...</AppElectionHawk>
+<script src="~/dist/vendor.js" asp-append-version="true"></script>
+@section scripts
+    {
+    <script src="~/dist/main-client.js" asp-append-version="true"></script>
+}
+
+@*<div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                This is some text within a card block.
+            </div>
+        </div>
+    </div>*@

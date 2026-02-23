@@ -1,0 +1,97 @@
+﻿<div class="row">
+ <div class="col-lg-12">
+
+        <div class="card card-outline-info">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">PollingScheme Form</h4>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Sample Form with the Icons</h4>
+                <h6 class="card-subtitle">made with bootstrap elements</h6>
+                <form class="form p-t-20" novalidate (ngSubmit)="save()" [formGroup]="pollingSchemeForm">
+				 
+                    <div class="form-group">
+                        <label for="name">Polling Station Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="name" type="text" formControlName="name" placeholder="name">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="malebooths">MaleBooths</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="malebooths" type="text" formControlName="malebooths" placeholder="malebooths">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="femalebooths">FemaleBooths</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="femalebooths" type="text" formControlName="femalebooths" placeholder="femalebooths">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="totalbooths">TotalBooths</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="totalbooths" type="text" formControlName="totalbooths" placeholder="totalbooths">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="malevoters">MaleVoters</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="malevoters" type="text" formControlName="malevoters" placeholder="malevoters">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="femalevoters">FemaleVoters</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="femalevoters" type="text" formControlName="femalevoters" placeholder="femalevoters">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="totalvoters">TotalVoters</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="totalvoters" type="text" formControlName="totalvoters" placeholder="totalvoters">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="latitude">Latitude</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="latitude" type="text" formControlName="latitude" placeholder="latitude">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="longitude">Longitude</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="longitude" type="text" formControlName="longitude" placeholder="longitude">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="pollingschemeimageurl">PollingStationImageUrl</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="pollingschemeimageurl" type="text" formControlName="pollingschemeimageurl" placeholder="pollingschemeimageurl">
+                        </div>
+                    </div><div class="form-group">
+                        <label for="pollingschememapurl">PollingStationMapUrl</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="pollingschememapurl" type="text" formControlName="pollingschememapurl" placeholder="pollingschememapurl">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="ecppsno">ECP PS No</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="ecppsno" type="text" formControlName="ecppsno" placeholder="ecppsno">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+        
+</div>
+    </div>
+<!--                        <p-calendar id="publishedDate" class="form-control" formControlName="publishedDate" dateFormat="mm/dd/yy" ></p-calendar>-->

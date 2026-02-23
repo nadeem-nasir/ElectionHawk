@@ -1,0 +1,53 @@
+<p-table [value]="candidate" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header">
+        <tr>
+            <!-- <th>Sr.#</th> -->
+            <th>Name</th>
+            <!-- <th>Age</th> -->
+            <!-- <th>Gender</th> -->
+            <!-- <th>Status</th> -->
+            <!-- <th>Address</th> -->
+            <th>Constituency</th>
+            <th>PoliticalParty</th>
+            <!-- <th>ProfileType</th> -->
+            <th>Picture</th>
+            <th>Phone1</th>
+            <!-- <th>Phone2</th> -->
+            <!-- <th>Email</th> -->
+            <!-- <th>Whatsapp</th> -->
+            <!-- <th>Facebook</th> -->
+            <!-- <th>Twitter</th> -->
+            <!-- <th>Media Presence</th> -->
+			<th>Action</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-c>
+        <tr>
+            <!-- <td>{{c.candidateProfileId}}</td> -->
+            <td>{{c.name}}</td>
+            <!-- <td>{{c.age}}</td> -->
+            <!-- <td>{{c.gender}}</td> -->
+            <!-- <td>{{c.status}}</td> -->
+            <!-- <td>{{c.address}}</td> -->
+            <td>{{c.constituency.constituencyTitle}}</td>
+            <td>{{c.politicalParty.name}}</td>
+            <!-- <td>{{c.profileTypeId}}</td> -->
+            <td>{{c.picture}}</td>
+            <td>{{c.phone1}}</td>
+            <!-- <td>{{c.phone2}}</td> -->
+            <!-- <td>{{c.email}}</td> -->
+            <!-- <td>{{c.whatsapp}}</td> -->
+            <!-- <td>{{c.facebookUrl}}</td> -->
+            <!-- <td>{{c.twitterUrl}}</td> -->
+            <!-- <td>{{c.mediaPresence}}</td> -->
+			<td>
+			<a href="#" [routerLink]="['/candidate-edit']" 
+					[queryParams]="{Id:c?.candidateProfileId}">Edit</a>
+			&nbsp;
+			<a href="#">Delete</a>
+			</td>
+           
+        </tr>
+    </ng-template>
+</p-table>
+

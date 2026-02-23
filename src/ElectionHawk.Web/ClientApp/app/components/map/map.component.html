@@ -1,0 +1,18 @@
+<p-table [value]="map" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header">
+        <tr>
+            <!-- <th>Serial</th> -->
+            <th>Id</th>
+            <th>LocationTitle</th>
+            <th>Points</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-m>
+        <tr>
+            <td>{{m?.mapId}}</td>
+            <td>{{m?.locationTitle}}</td>
+            <td>{{m?.locationPoints}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+

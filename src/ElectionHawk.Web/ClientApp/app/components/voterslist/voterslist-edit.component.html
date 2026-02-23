@@ -1,0 +1,42 @@
+<div class="row">
+ <div class="col-lg-12">
+
+        <div class="card card-outline-info">
+            <div class="card-header">
+                <h4 class="m-b-0 text-white">Voterslist Form</h4>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Sample Form with the Icons</h4>
+                <h6 class="card-subtitle">made with bootstrap elements</h6>
+                <form class="form p-t-20" novalidate (ngSubmit)="save()" [formGroup]="voterslistEditForm">
+				 
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input class="form-control" id="title" type="text" formControlName="title" placeholder="title">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="voterListType">Voter List Type</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input class="form-control" id="voterListType" type="text" formControlName="voterListType" placeholder="voterListType">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="targetCommunityId">Target Community</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            <input class="form-control" id="targetCommunityId" placeholder="targetCommunityId" type="text" formControlName="targetCommunityId">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                    <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+        
+</div>
+    </div>

@@ -1,0 +1,276 @@
+<aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- User profile -->
+        <div class="user-profile">
+
+            <!-- User profile image -->
+            <div class="profile-img"> <img src="/MaterialPro/assets/images/1.jpg" alt="user" /> </div>
+            <!-- User profile text-->
+            <div class="profile-text">
+                <a href="#" class="dropdown-toggle link u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Markarn Doe <span class="caret"></span></a>
+                <div class="dropdown-menu animated flipInY">
+                    <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                    <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
+                    <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
+                    <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+                    <div class="dropdown-divider"></div> <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+        <!-- End User profile text-->
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li class="nav-small-cap">PERSONAL</li>
+                <li>
+                    <a href="#" [routerLink]="['/public']" aria-expanded="false"><i class="fa fa-circle"></i><span class="hide-menu">Starter Info</span></a>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-map-marker"></i><span class="hide-menu">With Dropdown</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="map-google.html">Google Maps</a></li>
+                        <li><a href="map-vector.html">Vector Maps</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Multi level dd</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="javascript:void(0)">item 1.1</a></li>
+                        <li><a href="javascript:void(0)">item 1.2</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.1</a></li>
+                                <li><a href="javascript:void(0)">item 1.3.2</a></li>
+                                <li><a href="javascript:void(0)">item 1.3.3</a></li>
+                                <li><a href="javascript:void(0)">item 1.3.4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">item 1.4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Campaign</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/campaign']">Campaign</a></li>
+                        <li><a [routerLink]="['/campaign-create']">Create Campaign</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Agenda</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a [routerLink]="['/agenda-create']">Create Agenda</a></li>
+								<li><a [routerLink]="['/agenda']">Agenda List</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Candidate</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/candidate']">Candidate</a></li>
+                        <li><a [routerLink]="['/candidate-create']">Create Candidate</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Constituency</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/constituency']">Constituency</a></li>
+                        <li><a [routerLink]="['/constituency-create']">Create Constituency</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">item 1.4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Election</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/election']">Election</a></li>
+                        <li><a [routerLink]="['/election-create']">Create Election</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Event</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/event']">Event</a></li>
+                        <li><a [routerLink]="['/event-create']">Create Event</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Expense</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/expense']">Expense</a></li>
+                        <li><a [routerLink]="['/expense-create']">Create Expense</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Map</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/map']">Map</a></li>
+                        <li><a [routerLink]="['/map-create']">Create Map</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">News</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/news-create']">Create News</a></li>
+                        <li><a [routerLink]="['/news']">News</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Notification</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/notification']">Notification</a></li>
+                        <li><a [routerLink]="['/notification-create']">Create Notification</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Political Parties</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/politicalparty']">Political Party</a></li>
+                        <li><a [routerLink]="['/politicalparty-create']">Create Political Party</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Polling Scheme</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/pollingschemestation']">Polling Station</a></li>
+                        <li><a [routerLink]="['/pollingscheme']">Polling Scheme</a></li>
+                        <li>
+                            <a class="has-arrow" [routerLink]="['/pollingscheme-create']" aria-expanded="false">Polling Scheme Create</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Profile</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/profile']">Profile</a></li>
+                        <li><a [routerLink]="['/profile-create']">Create Profile</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Voters List</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a [routerLink]="['/voterslist']">Voters List</a></li>
+                        <li><a [routerLink]="['/voterslist-create']">Create Voters List</a></li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void(0)">item 1.3.1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+    <!-- Bottom points-->
+    <div class="sidebar-footer">
+        <!-- item-->
+        <a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+        <!-- item-->
+        <a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+        <!-- item-->
+        <a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+    </div>
+    <!-- End Bottom points-->
+</aside>
+
+
+
+
+<!--<div class='main-nav'>
+    <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' [routerLink]="['/home']">WebApplication1</a>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/home']">
+                        <span class='glyphicon glyphicon-home'></span> Home
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/counter']">
+                        <span class='glyphicon glyphicon-education'></span> Counter
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/fetch-data']">
+                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>-->

@@ -1,0 +1,35 @@
+<p-table [value]="politicalParty" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header">
+        <tr>
+            <!-- <th>PoliticalPartyId</th> -->
+            <th>Name</th>
+            <th>Abbreviation</th>
+            <!-- <th>Description</th> -->
+            <th>LeaderName</th>
+            <th>Designation</th>
+            <!-- <th>Address</th> -->
+            <!-- <th>Website</th> -->
+            <!-- <th>FacebookUrl</th> -->
+            <!-- <th>TwitterUrl</th> -->
+            <!-- <th>Whatsapp</th> -->
+            <!-- <th>YouTube</th> -->
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-pp>
+        <tr>
+            <!-- <td>{{pp?.politicalPartyId}}</td> -->
+            <td>{{pp?.name}}</td>
+            <td>{{pp?.abbreviation}}</td>
+            <!-- <td>{{pp?.description}}</td> -->
+            <td>{{pp?.leaderName}}</td>
+            <td>{{pp?.designation}}</td>
+            <!-- <td>{{pp?.address}}</td> -->
+            <!-- <td>{{pp?.website}}</td> -->
+            <!-- <td>{{pp?.facebookUrl}}</td> -->
+            <!-- <td>{{pp?.twitterUrl}}</td> -->
+            <!-- <td>{{pp?.whatsapp}}</td> -->
+            <!-- <td>{{pp?.youTube}}</td> -->
+        </tr>
+    </ng-template>
+</p-table>
+

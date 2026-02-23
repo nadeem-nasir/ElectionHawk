@@ -1,0 +1,34 @@
+<p-table [value]="event" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header">
+        <tr>
+            <!-- <th>Serail No</th> -->
+            <!-- <th>EventId</th> -->
+            <th>Name</th>
+            <!-- <th>Description</th> -->
+            <!-- <th>Area</th> -->
+            <th>Venue</th>
+            <th>HeldOn</th>
+            <th>Agenda</th>
+            <th>OrganizerProfile</th>
+            <!-- <th>ProfileType</th> -->
+            <th>ChiefGuestProfile</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-ev>
+        <tr>
+            <!-- <td></td> -->
+            <!-- <td>{{ev?.eventId}}</td> -->
+            <td>{{ev?.name}}</td>
+            <!-- <td>{{ev?.description}}</td> -->
+            <!-- <td>{{ev?.areaId}}</td> -->
+            <td>{{ev?.venue}}</td>
+            <td>{{ev?.heldOn}}</td>
+            <td>{{ev?.agenda}}</td>
+            <td>{{ev?.organizer}}</td>
+            <!-- <td>{{ev?.profileTypeId}}</td> -->
+            <td>{{ev?.guest}}</td>
+            
+        </tr>
+    </ng-template>
+</p-table>
+
